@@ -1,19 +1,15 @@
-# Poetry
-alias po="poetry"
-alias por="po run"
-alias porp="por python3"
-
 # Python
-alias manage="porp manage.py"
 alias uvm="uv run python manage.py"
 
 # Git
 ## Git log fzf with preview (made by dbessey)
 alias glf="git log --oneline --graph --color=always --format='%h %s %C(blue)@%an%C(reset) %C(green)%cr%C(reset)' | fzf --ansi --preview 'git show --color \$(echo {} | cut -d\" \" -f1)'"
 
+{{- if eq .chezmoi.hostname "prt-515124" }}
 
+# VPN
 alias vpn="sudo openfortivpn -c /etc/openfortivpn/config"
+{{- end }}
 
-alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-
-# test
+# chezmoi
+alias chezmoi-publish="chezmoi git add -- -A && chezmoi git -- commit -m 'Update' && chezmoi git push"

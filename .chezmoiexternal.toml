@@ -1,0 +1,6 @@
+[".oh-my-zsh/custom/plugins/fast-syntax-highlighting"]
+    type = "git-repo"
+    url = "https://github.com/zdharma-continuum/fast-syntax-highlighting.git"
+[".oh-my-zsh/custom/themes/zsh-autosuggestions"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-autosuggestions.git"

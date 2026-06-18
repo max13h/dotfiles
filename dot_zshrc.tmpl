@@ -1,0 +1,33 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(
+	fast-syntax-highlighting
+	nvm
+	pyenv
+	ssh 
+	ssh-agent 
+	zoxide
+	zsh-autosuggestions 
+)
+source $ZSH/oh-my-zsh.sh
+export EDITOR='vim'
+
+source ~/.aliases
+
+{{- if eq .chezmoi.hostname "prt-515124" }}
+source ~/.scripts/unistra
+
+# pnpm
+export PNPM_HOME="/home/mhmae@ad.unistra.fr/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+{{- end }}
+
+# Atuin
+eval "$(atuin init zsh)"
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH
+

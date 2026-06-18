@@ -1,0 +1,21 @@
+[user]
+	name = {{ .git_name }}
+	email = {{ .git_email }}
+
+[credential "https://git.unistra.fr"]
+	helper = 
+	helper = !/usr/bin/glab auth git-credential
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	autocrlf = input
+
+[includeIf "gitdir:~/code/perso/"]
+	path = ~/.gitconfig-max13h
+
+[includeIf "gitdir:~/.local/share/chezmoi/"]
+	path = ~/.gitconfig-max13h
