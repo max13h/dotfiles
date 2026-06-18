@@ -12,4 +12,4 @@ alias vpn="sudo openfortivpn -c /etc/openfortivpn/config"
 {{- end }}
 
 # chezmoi
-alias chezmoi-publish="chezmoi git add -- -A && chezmoi git -- commit -m 'Update' && chezmoi git push"
+alias chezmoi-publish="chezmoi git add -- -A && chezmoi git -- commit -m 'Update' && chezmoi git -- push -u origin main"
