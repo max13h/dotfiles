@@ -11,6 +11,7 @@ alias glf="git log --oneline --graph --color=always --format='%h %s %C(blue)@%an
 # alias vpn="sudo openfortivpn -c /etc/openfortivpn/config"
 alias vpn="sudo systemctl restart unistra-vpn && sudo journalctl -u unistra-vpn -f"
 alias vpnstatus="systemctl status unistra-vpn"
+alias vpnlog="sudo journalctl -u unistra-vpn -f"
 {{- end }}
 
 # chezmoi
