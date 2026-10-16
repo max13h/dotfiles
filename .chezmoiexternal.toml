@@ -4,3 +4,6 @@
 [".oh-my-zsh/custom/themes/zsh-autosuggestions"]
     type = "git-repo"
     url = "https://github.com/zsh-users/zsh-autosuggestions.git"
+[".unistra/vue-deploy-sh"]
+    type = "git-repo"
+    url = "https://git.unistra.fr/dip/deploy/vue-deploy-sh"
