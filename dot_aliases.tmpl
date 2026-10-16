@@ -6,10 +6,7 @@ alias uvm="uv run python manage.py"
 alias glf="git log --oneline --graph --color=always --format='%h %s %C(blue)@%an%C(reset) %C(green)%cr%C(reset)' | fzf --ansi --preview 'git show --color \$(echo {} | cut -d\" \" -f1)'"
 
 # VPN
-alias unistra-vpn="sudo systemctl restart unistra-vpn && sudo journalctl -u unistra-vpn -f"
-alias unistra-vpn-status="systemctl status unistra-vpn"
-alias unistra-vpn-stop="systemctl stop unistra-vpn"
-alias unistra-vpn-log="sudo journalctl -u unistra-vpn -f"
+alias unistra-vpn="sudo openfortivpn -c ~/.config/openfortivpn/config"
 
 # copy to clipboard
 alias 2clip="xclip -selection clipboard"
